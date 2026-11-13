@@ -19,12 +19,15 @@
       <div><label for="turno">Turno</label><select id="turno"><option>1º turno</option><option>2º turno</option><option>3º turno</option></select></div>
     </div>
     <div class="row">
-      <div><label for="func">Função</label><select id="func"><option>Líder/Operador</option><option>Inspetor</option><option>Processo</option></select></div>
-      <div><label for="hora">Horário</label><input id="hora" type="time"></div>
+      <div><label for="func">Função</label><select id="func"><option>Operador</option><option>Líder</option><option>Inspetor</option><option>Processo</option></select></div>
+      <div><label for="verif">Verificação</label><select id="verif"><option>1ª verificação</option><option>2ª verificação</option></select></div>
     </div>
     <div class="row">
+      <div><label for="hora">Horário</label><input id="hora" type="time"></div>
       <div><label for="mat">Matrícula</label><input id="mat" inputmode="numeric" placeholder="5535"></div>
-      <div><label for="nome">Nome</label><input id="nome" placeholder="Opcional"></div>
+    </div>
+    <div class="row">
+      <div style="grid-column:1/-1"><label for="nome">Nome</label><input id="nome" placeholder="Opcional"></div>
     </div>
   </div>
   <button class="okbox" id="ok" type="button"><i></i>Qualidade verificada: OK</button>
@@ -35,7 +38,7 @@
 
 <section id="v2" class="hide">
   <div class="card"><table><thead><tr><th>Inj.</th><th>1º turno</th><th>2º turno</th><th>3º turno</th></tr></thead><tbody id="tb"></tbody></table>
-  <p class="sub" style="margin:10px 0 0"><b>L</b> líder/operador · <b>I</b> inspetor · <b>P</b> processo</p></div>
+  <p class="sub" style="margin:10px 0 0">Cada número mostra quantas funções (de 4) já registraram naquela verificação</p></div>
   <button class="link" id="csv">Baixar registros (CSV para Excel)</button>
 </section>
 
