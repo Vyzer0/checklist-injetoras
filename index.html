@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Acompanhamento de processo produtivo</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Acompanhamento de processo produtivo</h1>
+<p class="sub" id="sub"></p>
+<nav><button id="n1" class="on">Registrar</button><button id="n2">Painel do dia</button></nav>
+
+<section id="v1">
+  <div class="card">
+    <div class="row">
+      <div><label for="inj">Injetora</label><select id="inj"></select></div>
+      <div><label for="turno">Turno</label><select id="turno"><option>1º turno</option><option>2º turno</option><option>3º turno</option></select></div>
+    </div>
+    <div class="row">
+      <div><label for="func">Função</label><select id="func"><option>Líder/Operador</option><option>Inspetor</option><option>Processo</option></select></div>
+      <div><label for="hora">Horário</label><input id="hora" type="time"></div>
+    </div>
+    <div class="row">
+      <div><label for="mat">Matrícula</label><input id="mat" inputmode="numeric" placeholder="5535"></div>
+      <div><label for="nome">Nome</label><input id="nome" placeholder="Opcional"></div>
+    </div>
+  </div>
+  <button class="okbox" id="ok" type="button"><i></i>Qualidade verificada: OK</button>
+  <div class="card" style="margin-top:12px"><label for="obs">Observação (opcional)</label><textarea id="obs" rows="2"></textarea></div>
+  <button class="go" id="send" disabled>Enviar registro</button>
+  <p class="msg" id="msg" role="status"></p>
+</section>
+
+<section id="v2" class="hide">
+  <div class="card"><table><thead><tr><th>Inj.</th><th>1º turno</th><th>2º turno</th><th>3º turno</th></tr></thead><tbody id="tb"></tbody></table>
+  <p class="sub" style="margin:10px 0 0"><b>L</b> líder/operador · <b>I</b> inspetor · <b>P</b> processo</p></div>
+  <button class="link" id="csv">Baixar registros (CSV para Excel)</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
