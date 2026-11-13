@@ -1,5 +1,4 @@
-// Cole aqui o link do Google Apps Script (veja as instruções). Vazio = salva só neste aparelho.
-var SHEET_URL="";
+var SHEET_URL="https://script.google.com/macros/s/AKfycbyoEVcsxkF5FmZPry_LFpemC4fmqkawokJxg0CyZZX2G1mV3MRQpR0DZXuAVsj-PlKs/exec";
 var KEY="chk-injetoras",$=function(i){return document.getElementById(i)},isOk=false;
 function load(){try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]}}
 function save(a){try{localStorage.setItem(KEY,JSON.stringify(a))}catch(e){}}
