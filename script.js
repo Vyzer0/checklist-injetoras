@@ -1,5 +1,4 @@
-// Cole aqui o link do Google Apps Script (termina em /exec). Vazio = salva só neste aparelho.
-var SHEET_URL="";
+var SHEET_URL="https://script.google.com/macros/s/AKfycbyoEVcsxkF5FmZPry_LFpemC4fmqkawokJxg0CyZZX2G1mV3MRQpR0DZXuAVsj-PlKs/exec";
 var KEY="chk-injetoras",$=function(i){return document.getElementById(i)},res="";
 var TURNOS=["1º turno","2º turno","3º turno"],VERIFS=["1ª verificação","2ª verificação"];
 function load(){try{return JSON.parse(localStorage.getItem(KEY))||[]}catch(e){return[]}}
