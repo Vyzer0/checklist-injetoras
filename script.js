@@ -39,3 +39,20 @@ $("csv").onclick=function(){
   var l=["data;horario;injetora;turno;funcao;matricula;nome;verificacao;resultado;obs"].concat(load().map(function(r){return[r.data,r.horario,r.injetora,r.turno,r.funcao,r.matricula,r.nome,r.verificacao,r.resultado,r.obs].join(";")}));
   var u=URL.createObjectURL(new Blob(["\ufeff"+l.join("\n")],{type:"text/csv"})),x=document.createElement("a");x.href=u;x.download="registros.csv";x.click();
 };
+var INICIO_TURNOS = [
+  { nome: "1º turno", inicio: "05:40" },
+  { nome: "2º turno", inicio: "14:00" },
+  { nome: "3º turno", inicio: "22:17" }
+];
+function turnoDe(hhmm) {
+  var p = hhmm.split(":");
+  var min = (+p[0]) * 60 + (+p[1]); 
+
+  var turno = INICIO_TURNOS[INICIO_TURNOS.length - 1].nome;
+  INICIO_TURNOS.forEach(function(t) {
+    var q = t.inicio.split(":");
+    if (min >= (+q[0]) * 60 + (+q[1])) turno = t.nome;
+  });
+  return turno;
+}
+$("turno").value = turnoDe(agora());
